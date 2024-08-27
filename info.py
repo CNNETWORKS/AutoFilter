@@ -27,7 +27,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', ''))
 API_HASH = environ.get('API_HASH', '')
-OWNER_ID = environ.get('OWNER_ID', '6497757690')
+OWNER_ID = environ.get('OWNER_ID', '6656382786')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 # Bot settings
@@ -54,17 +54,17 @@ PREFIX = environ.get("PREFIX", "/")
 CHAT_GROUP = int(environ.get("CHAT_GROUP", "-1001953724858"))
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6497757690 5115691197').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001619818259').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6656382786 2123118741').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002203681828').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '6497757690').split()]
-auth_channel = environ.get('AUTH_CHANNEL', '') #Channel / Group Id for force sub ( make sure bot is admin )
+PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '6656382786 2123118741').split()]
+auth_channel = environ.get('AUTH_CHANNEL', '-1002249571243') #Channel / Group Id for force sub ( make sure bot is admin )
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1001566837125') # support group id ( make sure bot is admin )
-reqst_channel = environ.get('REQST_CHANNEL_ID', '-1001905367057') # request channel id ( make sure bot is admin )
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002197600798') # support group id ( make sure bot is admin )
+reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002203681828') # request channel id ( make sure bot is admin )
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False)) # True if you want no results messages in Log Channel
@@ -85,16 +85,16 @@ AI_LOGS = int(environ.get("AI_LOGS", "-1001868871195")) #GIVE YOUR NEW LOG CHANN
 
 #Auto approve 
 CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id for app_chat_id in environ.get('CHAT_ID', '').split()]
-TEXT = environ.get("APPROVED_WELCOME_TEXT", "<b>{mention},\n\nʏᴏᴜʀ ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴊᴏɪɴ {title} ɪs ᴀᴘᴘʀᴏᴠᴇᴅ.\n\‣ ᴘᴏᴡᴇʀᴇᴅ ʙʏ @codflix_bots</b>")
+TEXT = environ.get("APPROVED_WELCOME_TEXT", "<b>{mention},\n\nʏᴏᴜʀ ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴊᴏɪɴ {title} ɪs ᴀᴘᴘʀᴏᴠᴇᴅ.\n\‣ ᴘᴏᴡᴇʀᴇᴅ ʙʏ @movies_worldop</b>")
 APPROVED = environ.get("APPROVED_WELCOME", "on").lower()
 
 # Referal Settings
-REFERAL_COUNT = int(environ.get('REFERAL_COUNT', '20')) # number of referal count
-REFERAL_PREMEIUM_TIME = environ.get('REFERAL_PREMEIUM_TIME', '1 week')
-OWNER_USERNAME = environ.get('OWNER_USERNAME', 'sewxiy') # owner username without @
+REFERAL_COUNT = int(environ.get('REFERAL_COUNT', '10')) # number of referal count
+REFERAL_PREMEIUM_TIME = environ.get('REFERAL_PREMEIUM_TIME', '2 week')
+OWNER_USERNAME = environ.get('OWNER_USERNAME', 'cnxowner') # owner username without @
 
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001868871195')) #Log channel id ( make sure bot is admin )
-DUMP_CHNL = int(environ.get('DUMP_CHNL', '-1002067012611'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002168941517')) #Log channel id ( make sure bot is admin )
+DUMP_CHNL = int(environ.get('DUMP_CHNL', '-1002235239432'))
 
 # Verify
 VERIFY = bool(environ.get('VERIFY', True)) # Verification On ( True ) / Off ( False )
